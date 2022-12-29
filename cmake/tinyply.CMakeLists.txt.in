@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(tinyply-download NONE)
 
 include(ExternalProject)
-ExternalProject_Add(pmc
+ExternalProject_Add(tinyply
         GIT_REPOSITORY    https://github.com/ancy397031272/tinyply.git
         GIT_TAG           40aa4a0ae9e9c203e11893f78b8bcaf8a50e65f0
         SOURCE_DIR        "${CMAKE_CURRENT_BINARY_DIR}/tinyply-src"
