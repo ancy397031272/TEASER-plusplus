@@ -5,6 +5,10 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/" ${CMAKE_MODULE_PATH})
 
+# Global Security options (including 3rd party code)
+# Add -fPIC for library and -fPIE for executable to compiler and linker. Does not add -pie !
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 # Check build types
 if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     message(STATUS "Setting build type to 'Release' as none was specified.")
